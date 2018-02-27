@@ -1,11 +1,26 @@
-<img align="right" width="90" height="90" src="https://avatars1.githubusercontent.com/u/6611839?s=200&v=4" alt="CodeCore">
-
 # Hangman - The Game
-> 2017-11 - Bootcamp Codecore
 
-## Assignment: Hangman - Due Jan 12 - Assigned Jan 5         
+![HangMan](/img/screen_cap.png)
 
-Create a small Hangman game only with DOM manipulation without a backend. You can use jQuery to write your solution.
+## Play the game [here](http://www.parolin.net/hangman)
+
+
+## Built With
+
+* HTML5
+* CSS3 + Bootstrap
+* JavaScript + jQuery
+
+## Author
+
+**Gustavo parolin**
+ * [LinkedIn](https://www.linkedin.com/in/gustavo-parolin/)
+ * [Portfolio](http://www.parolin.net/)
+
+
+## Assignment:        
+
+Create a small Hangman game only with DOM manipulation without a backend. 
 
 ### Making Guesses
 * Build a grid of letters that are clickable.
