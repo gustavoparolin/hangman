@@ -1,0 +1,43 @@
+body {
+  padding-top: 1rem;
+}
+
+header {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+#word {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+aside {
+  text-align: center;
+}
+
+.letter {
+  text-align: center;
+  display: inline-block;
+  width: 2rem;
+  margin: .4rem;
+  border-bottom: 1px solid black;
+  font-size: 1.75rem;
+}
+
+.keyboard {
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-right: .4rem;
+  margin-bottom: .4rem;
+}
+
+img {
+  max-height:75vh;
+}
+
+@media screen and (max-width: 767px) {
+  img {
+    max-height: calc(100vh - 400px);
+  }
+}
