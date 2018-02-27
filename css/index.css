@@ -1,14 +1,10 @@
-body {
-  padding-top: 1rem;
-}
-
-header {
+.container .title {
   margin-bottom: 2rem;
   text-align: center;
 }
 
 #word {
-  margin: 2rem 0;
+  margin: 1rem 0;
   text-align: center;
 }
 
@@ -26,18 +22,24 @@ aside {
 }
 
 .keyboard {
-  width: 2.5rem;
-  height: 2.5rem;
-  margin-right: .4rem;
-  margin-bottom: .4rem;
+  width: 2.1rem;
+  height: 2.1rem;
+  margin-right: .3rem;
+  margin-bottom: .3rem;
+  font-size: 0.7em;
 }
 
 img {
-  max-height:75vh;
+  max-height:65vh;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 640px) {
   img {
-    max-height: calc(100vh - 400px);
+    max-height: calc(100vh - 450px);
+  }
+  .letter {
+    font-size: 1.3em;
+    width: 1.4rem;
+    margin: .3rem;
   }
 }

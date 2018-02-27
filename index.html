@@ -3,42 +3,79 @@
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1">
+    <link rel="shortcut icon" href="img/favicon.ico" />
+    <title>Hangman Game</title>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/index.css">
+    <link href="css/index.css" rel="stylesheet" type="text/css">
+    <link href="css/main.css" rel="stylesheet" type="text/css">
 
-    <title>Hangman Game</title>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <script defer src="js/index.js"></script>
+
   </head>
   <body>
-    <div class="container">
-      <header>
-        <span class="letter">H</span>
-        <span class="letter">A</span>
-        <span class="letter">N</span>
-        <span class="letter">G</span>
-        <span class="letter">M</span>
-        <span class="letter">A</span>
-        <span class="letter">N</span>
-      </header>
+    <header>
+      <div class="header">
+        <div class="titles">
+          <h1 class="title"><i class="fas fa-snowflake fa-spin"></i> Gustavo Parolin</h1>
+          <h2 class="subtitle">Full Stack Web Developer</h2>
+        </div>
+      </div>
+    </header>
 
-      <main class="row">
-        <content class="col-md">
-          <div id="keyboard"></div>
-          <div id="word"></div>
-        </content>
-        <aside class="col-md">
-          <img class="img-fluid" src="img/g0.jpg" alt="Gallows">
-        </aside>
-      </main>
-      <footer></footer>
-    </div>
+    <main>
+      <div class="container">
+
+        <div class="title">
+          <span class="letter">H</span>
+          <span class="letter">A</span>
+          <span class="letter">N</span>
+          <span class="letter">G</span>
+          <span class="letter">M</span>
+          <span class="letter">A</span>
+          <span class="letter">N</span>
+        </div>
+
+        <div class="row">
+          <content class="col-sm">
+            <div id="keyboard"></div>
+            <div id="word"></div>
+          </content>
+          <aside class="col-sm">
+            <img class="img-fluid" src="img/g0.jpg" alt="Gallows">
+          </aside>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <span class="social">
+        <a href="https://github.com/gustavoparolin" title="Source code at GitHub" target="_blank"><i class="fab fa-github fa-2x"></i></a>
+      </span>
+      <span class="social">
+        <a href="https://www.facebook.com/gustavo.parolin" title="Social perfil at Facebook" target="_blank"><i class="fab fa-facebook-square fa-2x"></i></a>
+      </span>
+      <span class="social">
+        <a href="https://www.linkedin.com/in/gustavo-parolin/" title="Professional perfil at LinkedIn" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
+      </span>
+      <span class="social">
+        <a href="http://www.parolin.net/" title="Portfolio" target="_blank"><i class="fas fa-user-circle fa-2x"></i></a>
+      </span>
+      <div class="credits">
+        <span class="credit">
+          <a href="mailto:gustavo@parolin.net">gustavo@parolin.net</a>
+        </span>
+      </div>
+    </footer>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
-    <script src="index.js"></script>
   </body>
 </html>

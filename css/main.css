@@ -1,0 +1,301 @@
+/* General */
+
+html {
+  font-family: sans-serif;
+  line-height: 1.15;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+
+  height: 100%;
+  color: #404040;
+  font: 400 1em/1.4 'Open Sans', sans-serif;
+  /* text-rendering: optimizeLegibility; */
+}
+
+body {
+  margin: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 100%;
+  min-width: 300px;
+}
+
+article, aside, footer, header, nav, section, main {
+  display: block;
+}
+
+*, :after, :before {
+  box-sizing: border-box;
+}
+
+@media (-webkit-min-device-pixel-ratio:1.5), (min-resolution:1.5dppx), (min-resolution:144dpi) {
+  html {
+    font-weight: 300;
+  }
+}
+
+h1 {
+  font-weight: 300;
+  font-size: 2em;
+  -webkit-font-kerning: normal;
+  line-height: 1;
+  margin: .25em 0 .75em;
+}
+
+@media (min-width:640px) {
+  h1 {
+    font-size: 2.5em;
+    margin: 0.6em 0;
+  }
+}
+
+h2 {
+  font-size: 1.333em;
+  margin: 0.2em 0;
+}
+
+h2, h3 {
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 1em;
+}
+
+h3, p, pre {
+  margin: 0 0 1.5em;
+}
+
+.Error {
+  padding: 1em 1.5em;
+  background: #c00;
+  color: #fff;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* Header */
+
+header, footer {
+  -webkit-box-flex: 0;
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+}
+
+.header {
+  padding: 1em;
+  background-color: hsla(31, 15%, 50%, .1);
+  text-align: center;
+}
+
+@media (min-width:640px) {
+  .header {
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .header, .header .titles {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .header .titles {
+    -webkit-box-align: baseline;
+    -webkit-align-items: baseline;
+    -ms-flex-align: baseline;
+    align-items: baseline;
+  }
+  .header .title {
+    font-size: 1.5em;
+  }
+  .header .subtitle {
+    margin: 0 0.6em 0.2em;
+    font-size: .8em;
+    font-weight: 300;
+    color: gray;
+  }
+}
+
+.title {
+  margin: 0 0 .15em;
+  font-size: 1.8em;
+  font-weight: 600;
+  line-height: 1;
+  word-spacing: .08em;
+}
+
+.title i {
+  font-family: serif;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.title a {
+  border: 0;
+  color: inherit;
+  font-weight: inherit;
+}
+
+.title a:active, .title a:focus, .title a:hover {
+  text-decoration: none;
+}
+
+@media (min-width:640px) {
+  .title {
+    font-size: 4em;
+  }
+}
+
+.subtitle {
+  font-size: .8em;
+  font-weight: 300;
+  white-space: nowrap;
+}
+
+@media (max-width:639px) {
+  #board-title {
+    font-size: 1.1em;
+  }
+
+  .title {
+    font-size: 1.2em;
+  }
+
+  .subtitle {
+    display: none;
+  }
+}
+
+/* Content */
+
+main {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  padding: 0.2em 1.5em 0;
+  width: 100%;
+}
+
+main:after {
+  content: '\00a0';
+  display: block;
+  margin-top: 1.5em;
+  height: 0;
+  visibility: hidden;
+}
+
+.container {
+  display: flex;
+  flex-flow: row wrap;
+  max-width: 50em;
+  margin: 0 auto;
+}
+
+.container > * {
+  flex: 1 100%;
+}
+
+.container h1 {
+  flex: 1 100%;
+}
+
+.content {
+  width: calc(70% - 30px);
+  padding: .8em 1em 0;
+}
+
+.content:after {
+  content: '\00a0';
+  display: block;
+  margin-top: 1em;
+  height: 0;
+  visibility: hidden;
+}
+
+.aside {
+  width: calc(30% - 50px);
+  padding: .8em 1em 0;
+  margin-left: 0;
+}
+
+.aside:after {
+  content: '\00a0';
+  display: block;
+  margin-top: 1em;
+  height: 0;
+  visibility: hidden;
+}
+
+@media all and (min-width: 640px) {
+  .content {
+    flex: 3 0px;
+    order: 1;
+  }
+
+  .aside   {
+    flex: 1 auto;
+    order: 2;
+    margin-left: 20px;
+  }
+}
+
+.space {
+  margin-bottom: 1.5em;
+}
+
+/* Footer */
+
+footer {
+  padding: 10px;
+  padding: 0.6rem;
+  background: #404040;
+  color: #CCC;
+  font-size: .75em;
+  text-align: center;
+}
+
+footer a {
+  padding-bottom: 1px;
+  border: 0;
+  color: #e5e5e5;
+  text-decoration: none;
+}
+
+footer a:active, footer a:focus, footer a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.credits {
+  margin: 0;
+  padding: 0;
+}
+
+.credit {
+  display: block;
+  margin: 0;
+}
+
+.social a {
+  display: inline-block;
+  margin: 0.6em 1em 0;
+  vertical-align: top;
+}
+
+@media (min-width:576px) {
+  .credit {
+    display: inline-block;
+    margin: 0 .25em;
+  }
+}

@@ -1,14 +1,19 @@
-const wordsBank = "hammer promise maniacal string taste shelf fool excite rail release enjoy trade dorks girl sticks pretend relieved pickle volleyball plate puncture panoramic name motionless wail sad knowledge water smash produce yam large care observe name hulking jaded wood insidious rate pretty paddle damp nation dance colorful limsy curl park childlike fierce fair gun soothe abounding trace nest swanky battle wiry nose broken tight reduce stormy homeless uppity look exam nervous joke fix simplistic level paint saint gratis spiders wire obtainable humdrum tesseract change piquant witty explain delay mutter languid woebegone disturbed slow romantic caption squander rule list ambiguous present telephone butter";
+const wordsBank = "hammer promise maniacal string taste shelf fool excite rail release enjoy trade dorks girl sticks pretend relieved pickle volleyball plate puncture panoramic name motionless wail sad knowledge water smash produce yam large care observe name hulking jaded wood insidious rate pretty paddle damp nation dance colorful limsy curl park childlike fierce fair gun soothe abounding trace nest swanky battle wiry nose broken tight reduce stormy homeless uppity look exam nervous joke fix simplistic level paint saint slug gratis spiders wire obtainable humdrum tesseract change piquant witty explain delay mutter languid woebegone disturbed slow romantic caption squander rule list ambiguous present telephone butter";
 
 $(document).ready(function() {
   const words = wordsBank.toUpperCase().split(' ');
-  const chooseOne = Math.floor(Math.random() * words.length);
-  const mysteryWord = words[chooseOne].split('');
+
+  let chooseOne = 0;
+  let mysteryWord = [];
   let myWord = [];
   let strWord = '';
   let correctLetters = [];
   let wrongLetters = [];
   let wrongTryCounter = 0;
+
+  const winningSound = () => new Audio(`sound/success.wav`);
+  const losingSound = () => new Audio(`sound/fail.wav`);
+  const keySound = () => new Audio(`sound/keyboard-1.wav`);
 
   // creating the keyboard
   for (let i = 65; i <= 90; i++){
@@ -17,13 +22,30 @@ $(document).ready(function() {
     );
   }
 
-  // creating Mistery Word
-  buildMisteryWord();
+  newGame();
 
-  console.log(mysteryWord.join(''));
+  function newGame() {
+    chooseOne = Math.floor(Math.random() * words.length);
+    mysteryWord = words[chooseOne].split('');
+    myWord = [];
+    strWord = '';
+    correctLetters = [];
+    wrongLetters = [];
+    wrongTryCounter = 0;
 
-  // Create the Gallows image
-  $('img').attr('src', `img/g${wrongTryCounter}.jpg`);
+    // clean the keyboard
+    for (let i = 65; i <= 90; i++){
+      $(`#${String.fromCharCode(i)}`).removeClass().addClass('btn btn-outline-secondary keyboard');
+    }
+
+    // creating Mistery Word
+    buildMisteryWord();
+
+    // Create the Gallows image
+    $('img').attr('src', `img/g0.jpg`);
+
+    console.log(mysteryWord.join(''));
+  }
 
   // creating the Hidden Word
   function buildMisteryWord() {
@@ -92,23 +114,21 @@ $(document).ready(function() {
     buildMisteryWord();
   }
 
-  const winningSound = () => new Audio(`sound/success.wav`);
-  const losingSound = () => new Audio(`sound/fail.wav`);
-  const keySound = () => new Audio(`sound/keyboard-1.wav`);
-
   function gameOver(value) {
     if (value == 'WON') {
       winningSound().play();
       setTimeout(() => {
         alert('You WON!!! Let`s try again?');
-        location.reload();
-  		}, 500);
+        // location.reload();
+        newGame();
+  		}, 700);
     } else {
       losingSound().play();
       setTimeout(() => {
         alert('You LOST!! Let`s try again!');
-        location.reload();
-  		}, 500);
+        // location.reload();
+        newGame();
+  		}, 700);
     }
   }
 
