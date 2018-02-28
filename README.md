@@ -2,7 +2,7 @@
 
 ![HangMan](/img/screen_cap.png)
 
-## Play the game [here](http://www.parolin.net/hangman)
+## Play the game [here](http://www.parolin.net/project/hangman)
 
 
 ## Built With
@@ -20,7 +20,7 @@
 
 ## Assignment:        
 
-Create a small Hangman game only with DOM manipulation without a backend. 
+Create a small Hangman game only with DOM manipulation without a backend.
 
 ### Making Guesses
 * Build a grid of letters that are clickable.
