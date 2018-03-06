@@ -63,7 +63,7 @@ $(document).ready(function() {
     $('#word').html(strWord);
 
     // test if the actual word is equal to mistery word. If yes, call gameOver function
-    if (myWord.length == mysteryWord.length) {
+    if (myWord.length === mysteryWord.length) {
       for (let i = 0; i < myWord.length; i++) {
         if (myWord[i] != mysteryWord[i]) {
           return false;
@@ -103,10 +103,9 @@ $(document).ready(function() {
       if (!wrongLetters.includes(chosenLetter)) {
         wrongLetters.push(chosenLetter);
         $(`#${chosenLetter}`).addClass('btn-danger disabled').removeClass('btn-outline-secondary');
-        if (wrongTryCounter == 6) {
+        wrongTryCounter += 1;
+        if (wrongTryCounter === 6) {
           gameOver('LOST');
-        } else {
-          wrongTryCounter += 1;
         }
       }
       $('img').attr('src', `img/g${wrongTryCounter}.jpg`);
@@ -115,7 +114,7 @@ $(document).ready(function() {
   }
 
   function gameOver(value) {
-    if (value == 'WON') {
+    if (value === 'WON') {
       winningSound().play();
       setTimeout(() => {
         alert('You WON!!! Let`s try again?');
