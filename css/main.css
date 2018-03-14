@@ -88,12 +88,20 @@ header, footer {
   -webkit-flex: none;
   -ms-flex: none;
   flex: none;
+  font-family: 'Comfortaa', cursive;
+  /* font-family: 'Varela Round', sans-serif; */
+  /* font-family: 'Oxygen Mono', monospace; */
+  /* font-family: 'Itim', cursive; */
+  /* font-family: 'Fira Mono', monospace; */
+  /* font-family: 'Cousine', monospace; */
+  /* font-family: 'Handlee', cursive; */
 }
 
 .header {
   padding: 1em;
   background-color: hsla(31, 15%, 50%, .1);
   text-align: center;
+  font-size: 1.1em;
 }
 
 @media (min-width:640px) {
